@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Momento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ Nossa História ❤️</h1>
+
+    <div class="gallery">
+      <button id="prevBtn" class="nav-btn">⟨</button>
+  
+      <div class="image-container">
+        <img src="fotos/1.jpg" alt="Foto 1" class="active">
+        <img src="fotos/2.jpg" alt="Foto 2">
+        <img src="fotos/3.jpg" alt="Foto 3">
+      </div>
+  
+      <button id="nextBtn" class="nav-btn">⟩</button>
+    </div>
+
+    <div class="music">
+  <iframe style="border-radius:12px" 
+          src="https://open.spotify.com/embed/track/7ETIZFr7163zFcz3RxKk5O?utm_source=generator" 
+          width="100%" 
+          height="352" 
+          frameborder="0" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+  </iframe>
+</div>
+
+    <div class="carta-wrapper">
+  <button id="abrirCartaBtn" class="btn-carta">💌 Abrir Carta</button>
+
+  <div class="texto escondido" id="cartaTexto">
+    <h2 class="carta-cabecalho">Oi, Amor.</h2>
+
+    <p>
+      Hoje é mais um dia 28 — o seu dia. Algumas semanas atrás, você me disse que adoraria se eu escrevesse uma carta para você, e eu te respondi que era muito difícil me expressar por meio de textos...
+    </p>
+
+    <p>
+      Mas hoje, sem nem perceber, simplesmente aconteceu. Faltando poucas horas para terminar minhas férias, a gente se deitou, colocamos um filme, e como sempre, você dormiu — de óculos, claro.
+    </p>
+
+    <p>
+      Mas quando fui tirá-lo do seu rosto, me encontrei em um estado de inércia, como se o tempo tivesse parado ali mesmo. Fiquei te olhando... e, de um jeito inexplicável, as palavras começaram a surgir. Comecei a falar, baixinho, tudo o que sinto por você, como se meu coração tivesse encontrado voz naquele silêncio.
+    </p>
+
+    <p>
+      E agora, coloco aqui tudo o que disse naquele momento, para que você saiba o quanto te amo, mesmo quando está dormindo e o mundo parece parar.
+    </p>
+
+    <p>
+      <strong style="color: #ff4d6d;">Sthéfany</strong>, eu quero passar cada milissegundo da minha finita vida com você. Quero conhecer cada célula do seu corpo, sentir cada centímetro da sua pele, acariciar cada fio de cabelo e me perder na profundidade do universo infinito que é o seu olhar.
+    </p>
+
+    <p>
+      Poderia viver mil vidas ao seu lado e, ainda assim, não teria oportunidades o suficiente para expressar, com palavras e atitudes, o amor que sinto por ti!
+    </p>
+
+    <p>
+      Eu amo <strong>cada detalhe seu</strong>, Sthéfany.<br>
+      Obrigado por existir na minha vida.<br>
+     <em style="color: #ffb3c6; font-weight: bold;">Feliz nosso dia 28.</em>
+    </p>
+
+<p class="assinatura" style="text-align: right; margin-top: 40px;">
+  Com todo o meu amor,<br>
+  <span style="
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2em;
+    color: #ff4d6d;
+    text-shadow: 2px 2px 4px rgba(255, 0, 85, 0.3);
+    display: inline-block;
+    margin-top: 10px;
+  ">
+    David ❤️
+  </span>
+</p>
+    </p>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+
+    <script>
+  const btn = document.getElementById("abrirCartaBtn");
+  const carta = document.getElementById("cartaTexto");
+
+  btn.addEventListener("click", () => {
+    carta.classList.add("mostrar");
+    carta.classList.remove("escondido");
+    btn.style.display = "none"; 
+  });
+</script>
+
+    <script>
+  for (let i = 0; i < 25; i++) {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = `${Math.random() * 100}vw`;
+    heart.style.animationDuration = `${6 + Math.random() * 5}s`;
+    heart.style.top = `${Math.random() * 100}vh`;
+    document.body.appendChild(heart);
+  }
+</script>
+
+</body>
+</html>
