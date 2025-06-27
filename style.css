@@ -224,7 +224,6 @@ h1 {
   }
 }
 
-/* ajuste para o celular */
 @media (max-width: 600px) {
   h1.titulo-principal {
     font-size: 2em;
@@ -259,6 +258,30 @@ h1 {
     max-width: 90vw;
   }
 }
+
+.music-wrapper {
+  max-width: 400px;
+  margin: 20px auto 40px;
+  text-align: center;
+}
+
+.music-wrapper audio {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+  outline: none;
+  margin-top: 15px;
+}
+
+
+.music-hint {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #ff4d6d;
+  margin-bottom: 10px;
+}
+
 
 
 
