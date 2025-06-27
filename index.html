@@ -10,7 +10,7 @@
 <body>
   <div class="container">
 
-    <h1 class="titulo-principal music-hint">💖 Toque a música antes de continuar 💖</h1>
+    <h1 class="music-hint">💖 Toque a música antes de continuar 💖</h1>
 
     <div class="music-wrapper">
       <audio controls autoplay loop>
@@ -90,6 +90,9 @@
   </script>
 
   <script>
+    if (!window.heartsCreated) {
+      window.heartsCreated = true;
+    }
     for (let i = 0; i < 25; i++) {
       const heart = document.createElement('div');
       heart.classList.add('heart');

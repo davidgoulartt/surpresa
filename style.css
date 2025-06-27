@@ -204,15 +204,6 @@ h1 {
   position: relative;
 }
 
-.titulo-principal::after {
-  content: '💖';
-  position: absolute;
-  right: -40px;
-  top: 0;
-  font-size: 1.5em;
-  animation: pulse 2s infinite;
-}
-
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
