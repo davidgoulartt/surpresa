@@ -56,7 +56,9 @@ h1 {
 
 .image-container {
   width: 300px;
+  max-width: 90vw;
   height: 400px;
+  max-height: 80vh;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
@@ -66,7 +68,7 @@ h1 {
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
@@ -76,6 +78,8 @@ h1 {
 
 .image-container img.active {
   opacity: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .nav-btn {
@@ -118,7 +122,6 @@ h1 {
   position: relative;
   z-index: 2;
 }
-
 
 .btn-carta {
   background-color: #ff4d6d;
@@ -227,8 +230,9 @@ h1 {
   }
 
   .image-container {
-    width: 90vw;   
-    height: 60vw;  
+    width: 90vw;
+    height: 60vw;
+    max-height: 70vh;
   }
 
   .nav-btn {
@@ -264,7 +268,6 @@ h1 {
   margin-top: 15px;
 }
 
-
 .music-hint {
   font-family: 'DM Serif Display', serif;
   font-size: 2.2rem;
@@ -272,7 +275,3 @@ h1 {
   color: #ff4d6d;
   margin-bottom: 10px;
 }
-
-
-
-
