@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nosso Momento</title>
+  <title>Feliz Aniversário</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=DM+Serif+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -21,14 +21,15 @@
 
     <h1 class="titulo-principal">❤️ Nossa História ❤️</h1>
 
-    <div class="gallery">
-      <button id="prevBtn" class="nav-btn">⟨</button>
+      <div class="gallery">
+  <button id="prevBtn" class="nav-btn">⟨</button>
 
-      <div class="image-container">
-        <img src="fotos/1.jpg" alt="Foto 1" class="active" />
-        <img src="fotos/2.jpg" alt="Foto 2" />
-        <img src="fotos/3.jpg" alt="Foto 3" />
-      </div>
+  <div class="image-container" id="imageContainer">
+  </div>
+
+  <button id="nextBtn" class="nav-btn">⟩</button>
+  </div>
+
 
       <button id="nextBtn" class="nav-btn">⟩</button>
     </div>
@@ -102,5 +103,22 @@
       document.body.appendChild(heart);
     }
   </script>
+  <script>
+  const container = document.getElementById('imageContainer');
+
+  for (let i = 0; i <= 53; i++) {
+    const img = document.createElement('img');
+      img.alt = `Foto ${i}`;
+
+      img.src = `fotos/${i}.jpg`;
+      img.onerror = () => {
+        img.src = `fotos/${i}.jpeg`;
+      }
+
+    if (i === 0) img.classList.add('active'); 
+    container.appendChild(img);
+  }
+</script>
+
 </body>
 </html>
